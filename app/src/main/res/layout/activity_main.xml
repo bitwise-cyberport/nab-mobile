@@ -11,20 +11,23 @@
     tools:context="bh.nnab.MainActivity">
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Receive Money"
         android:id="@+id/RMButton"
-        android:layout_marginTop="127dp"
+        android:layout_marginTop="21dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Transaction History"
         android:id="@+id/THButton"
-        android:layout_marginTop="81dp"
+        android:layout_marginTop="23dp"
         android:layout_below="@+id/RMButton"
         android:layout_centerHorizontal="true" />
+
+
 </RelativeLayout>

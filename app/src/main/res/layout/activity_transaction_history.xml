@@ -8,11 +8,15 @@
         android:layout_height="0dp"
         android:layout_weight="0.50"
         >
-        <com.github.mikephil.charting.charts.LineChart
+        <!--<com.github.mikephil.charting.charts.LineChart
             android:id="@+id/transactionHistoryChart"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"/>
+            android:layout_weight="1"/>-->
+        <WebView
+            android:id="@+id/my_web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></WebView>
     </RelativeLayout>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/my_recycler_view"

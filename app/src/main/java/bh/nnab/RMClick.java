@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -30,7 +32,6 @@ public class RMClick extends AppCompatActivity implements View.OnClickListener {
     VolleySingleton helper = VolleySingleton.getInstance();
     final static String RECENT_API_ENDPOINT = "http://54.251.137.104:3001/api/transaction/verify";
     String responder = "";
-    EditText etName;
     EditText etID;
     EditText etPass;
 
@@ -38,8 +39,8 @@ public class RMClick extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rmclick);
+        setTitle("RECEIVE MONEY");
 
-        etName = (EditText) findViewById(R.id.editTextName);
         etID = (EditText) findViewById(R.id.editTextID);
         etPass = (EditText) findViewById(R.id.editTextPIN);
 
@@ -52,11 +53,10 @@ public class RMClick extends AppCompatActivity implements View.OnClickListener {
     }
 
     @Override
-    public void onClick(View view) {
-        String name = etName.getText().toString();
+    public void onClick(View view) {;
         String id = etID.getText().toString();
         String password = etPass.getText().toString();
-        if (name.equals("") || id.equals("") || password.equals("")) {
+        if (id.equals("") || password.equals("")) {
             Toast.makeText(view.getContext(), "Invalid Entry", Toast.LENGTH_LONG).show();
         } else {
             sendTransactionData(id, password);
